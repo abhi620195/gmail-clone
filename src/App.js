@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Emaillist from './Emaillist';
+import Compose from './Compose';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Sidebar />
         <Emaillist />
       </div>
+
+      <Compose/>
     </div>
   );
 }
