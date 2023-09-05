@@ -15,11 +15,15 @@ import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
 import './css/sidebar.css'
+import { useDispatch } from 'react-redux';
+import { openSendMessage } from './features/mailSlice'
 
 const Sidebar = () => {
+  const dispatch = useDispatch()
+
   return (
     <div className='sidebar'>
-      <Button startIcon={<AddIcon />} className='compose__btn'>compose</Button>
+      <Button startIcon={<AddIcon />} className='compose__btn' onClick={() => dispatch(openSendMessage())}>compose</Button>
 
       <Sidebaroptions Icon={InboxIcon} title={"Inbox"} number='224' isactive={true} />
       <Sidebaroptions Icon={StarRateIcon} title={"Starred"} number={500} />
@@ -32,7 +36,7 @@ const Sidebar = () => {
       <Sidebaroptions Icon={DeleteIcon} title="[Map]/Trash" number={258} />
       <Sidebaroptions Icon={FindInPageIcon} title="Documents" number={258} />
       <Sidebaroptions Icon={ExpandMoreIcon} title="More" number={258} />
-      <hr/>
+      <hr />
       <h3 className='sidebarOptions__heading'>Meet</h3>
       <Sidebaroptions Icon={VideocamIcon} title={"New Meeting"} />
       <Sidebaroptions Icon={KeyboardIcon} title={'Join a meeting'} />

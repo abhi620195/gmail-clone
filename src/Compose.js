@@ -14,9 +14,13 @@ import PhonelinkLockIcon from '@mui/icons-material/PhonelinkLock';
 import CreateIcon from '@mui/icons-material/Create';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import { useDispatch } from 'react-redux';
+import { closeSendMessage } from './features/mailSlice';
 
 const Compose = () => {
+
+    const dispatch = useDispatch();
+
     return (
         <div className='compose'>
             <div className='compose_header'>
@@ -27,7 +31,7 @@ const Compose = () => {
                 <div className='compose__header__right'>
                     <RemoveIcon />
                     <HeightIcon />
-                    <CloseIcon />
+                    <CloseIcon onClick={() => dispatch(closeSendMessage())} />
                 </div>
             </div>
 
@@ -51,16 +55,16 @@ const Compose = () => {
                 </div>
 
                 <div className='compose__footer__right'>
-                    <FormatColorTextIcon/>
-                    <AttachFileIcon/>
-                    <LinkIcon/>
-                    <InsertEmoticonIcon/>
-                    <NoteAddIcon/>
-                    <PhotoIcon/>
+                    <FormatColorTextIcon />
+                    <AttachFileIcon />
+                    <LinkIcon />
+                    <InsertEmoticonIcon />
+                    <NoteAddIcon />
+                    <PhotoIcon />
                     <PhonelinkLockIcon />
-                    <CreateIcon/>
-                    <MoreVertIcon/>
-                    <DeleteIcon/>
+                    <CreateIcon />
+                    <MoreVertIcon />
+                    <DeleteIcon />
                 </div>
             </div>
         </div>
