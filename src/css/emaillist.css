@@ -78,7 +78,7 @@
 .emailbody .emailbody__left {
     display: flex;
     align-items: center;
-    min-width: 250px;
+    min-width: 280px;
     flex: 15%;
 }
 
@@ -89,6 +89,7 @@
 }
 
 .emailbody .emailbody__left h4 {
+    margin-right: 15px;
     font-size: 14px;
 }
 
@@ -100,7 +101,7 @@
 
 .emailbody__middle .emailbody__middle__msg {
     display: flex;
-    width: 70%;
+    width: 90%;
 }
 
 .emailbody .emailbody__middle p {
@@ -120,5 +121,5 @@
 }
 
 .emailbody .emailbody__right p {
-    font-size: 14px;
+    font-size: 12px;
 }
